@@ -204,7 +204,7 @@ class Channel(object):
             for fn in files:
                 filepath = os.path.join(root, fn)
                 mimetype = mimetypes.guess_type(filepath)[0]
-                if mimetype and 'audio' in mimetype or filepath.endswith('m4b'):
+                if mimetype and 'audio' in mimetype or filepath.endswith('m4a'):
                     yield Episode(filepath, relative_dir, self.root_url)
 
     def as_xml(self):
